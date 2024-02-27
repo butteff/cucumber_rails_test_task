@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.copyright {
+  background-color: steelblue;
+}
+
+#mainbody {
+  min-height: 65vh;
+  background-color: #222;
+  color: whitesmoke;
+  padding: 10px 0px 40px 0px;
+}
+
+#navbar {
+  height: 15vh;
+  background-color: #222;
+}
+
+#footer {
+  height: 20vh;
+}
+
+#footer a {
+  color: white !important;
+}
+
+#footer .btn:hover {
+  background-color: steelblue;
+  opacity: 0.8;
+}
+
+.input-chat {
+  width: 77vw !important;
+}
+
+/* chat */
+
+.msg-container{
+  width: 100%;
+  display: flex;
+  padding: 10px;
+}
+
+.msg-container.right{
+  justify-content: flex-end
+}
+
+.msg-container.left{
+  justify-content: flex-start
+}
+
+.msg-container.right > .msg{
+    background-color: #4682b4;
+}
+
+.msg-container.left > .msg{
+  background-color: #000;
+  color: white;
+}
+
+.msg{
+  max-width: 50%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.rounder {
+  background-color: steelblue;
+  width: 92px;
+  height: 92px;
+  border-radius: 91px;
+  padding: 16px;
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
+
+.rounder img {
+  width: 64px;
+  height: 64px;
+}
+
+.delimeter {
+  border-top: 1px solid silver;
+  margin-top: 10px !important;
+}
+
+.username {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 13px;
+}
+
+.chat-side {
+  max-height: 43vh;
+  min-height: 43vh;
+  height: 43vh;
+  display: block;
+  overflow-y: scroll;
+}

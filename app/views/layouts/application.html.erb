@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Cucumber</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+      <%= stylesheet_link_tag "bootstrap", media: "all" %>
+      <%= javascript_importmap_tags %>
+      <% if user_signed_in? %>
+      <script>
+        const user_id = <%=current_user.id%>
+      </script>
+      <% end %>
+    </head>
+    <body id="page-top">
+      
+      <div id="navbar" class="row">
+        <div class="col-xs-12 col-md-8 col-lg-6">
+          <div class="rounder"><%= image_tag "logo.png" %></div>
+        </div>
+      </div>
+        
+      <section id="mainbody">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 mb-12 mb-lg-12">
+                <%= yield %>
+              </div>
+            </div>
+          </div>
+      </section>
+      
+      <div id="footer" class="copyright py-4 text-center text-white">
+          <div class="container">
+            <small>Copyright &copy; 2024 <a href="https://github.com/butteff/cucumber_rails_test_task" target="_blank">Cucumber Test Task</a></small>
+            <% if user_signed_in? %>
+               <p><%=current_user.email%></p> <%= link_to 'Logout', destroy_user_session_path, class: 'btn btn-outline-light me-2 btn-sm', data: {
+              turbo_method: :delete }%>
+            <% end %>
+          </div>
+      </div>
+    </body>
+</html>
+
