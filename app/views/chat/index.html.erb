@@ -1,16 +1,16 @@
 <div class="row">
 	<div class="col-xs-12 col-md-12 col-lg-12">
 		<div class="wrapper chat-side">
-			<% for message in @messages %>
+			<% @messages.each{ |message| %>
 				
 				<%= render 'bubble', 
-					dim: current_user.id == message.user_id ? 'right' : 'left' , 
+					dim: current_user.id == message.user_id ? 'right' : 'left', 
 					text: message.text, 
 					username: message.user.username, 
 					created_at: message.created_at 
 				%>
 			
-			<% end %>
+			<% } %>
 		</div>
 	</div>
 </div>
